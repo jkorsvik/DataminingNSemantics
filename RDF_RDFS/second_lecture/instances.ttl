@@ -1,0 +1,99 @@
+ex:StarWarsIV
+        rdf:type ex:StarWarsMovie ;
+        prop:hasCharacter  ex:luke ;
+        prop:hasCharacter  ex:yoda ;
+        prop:hasCharacter  ex:leia ;
+        prop:hasCharacter  ex:chew ;
+        prop:hasCharacter  ex:vader .
+
+ex:chew
+        rdf:type ex:Wookie ;
+        prop:hasName  "Chewbacca"@en> ;
+        prop:hasHeight  "1.85"^^xsd:float> ;
+        prop:hasMass  "80"^^xsd:float> ;
+        prop:hasHairColor  "brown"@en> ;
+        prop:hasEyeColor  "brown"@en> ;
+        prop:hasSkinColor  "brown"@en> ;
+        prop:isPlayedby "unknown"@en> ;
+        prop:hasFriend ex:leia ;
+        prop:hasFriend  ex:solo .
+
+
+ex:luke 
+        rdf:type ex:Human ;
+        rdf:type ex:Jedi ;
+        prop:hasTheForce  "yes"^^xsd:boolean> ;
+        prop:hasName  "Luke Skywalker" ;
+        prop:hasHeight  "1.72" ;
+        prop:hasMass  "77" ;
+        prop:hasHairColor  "blond" ;
+        prop:hasEyeColor  "blue" ;
+        prop:hasSkinColor  "fair" ;
+        prop:isPlayedby "Mark Hamill" ;
+        prop:hasFriend ex:han ;
+        prop:hasFriend ex:leia ;
+        prop:hasSister ex:leia ;
+        prop:hasFather ex:vader ;
+        prop:hasEnemy ex:vader .
+
+ex:yoda
+        rdf:type ex:Unknown ;
+        rdf:type ex:Jedi ;
+        prop:hasTheForce  "yes"^^xsd:boolean> ;
+        prop:hasName  "Yoda" ;
+        prop:hasHeight  "1.68" ;
+        prop:hasMass  "68" ;
+        prop:hasHairColor  "white" ;
+        prop:hasEyeColor  "green" ;
+        prop:hasSkinColor  "green" ;
+        prop:isPlayedby "Frank Oz" ;
+        prop:hasFriend ex:luke ;
+
+
+
+ex:leia
+        rdf:type ex:Human ;
+        prop:hasTheForce  "yes"^^xsd:boolean> ;
+        prop:hasName  "Leia Organa" ;
+        prop:hasHeight  "1.72" ;
+        prop:hasMass  "49" ;
+        prop:hasHairColor  "brown" ;
+        prop:hasSkinColor  "light" ;
+        prop:hasEyeColor  "brown" ;
+        prop:isPlayedby "Carrie Fisher" ;
+        prop:hasFriend ex:luke ;
+        prop:hasBrother ex:luke ;
+        prop:hasFather ex:vader ;
+        prop:hasEnemy ex:vader .
+
+ex:solo
+        rdf:type ex:Human ;
+        prop:hasTheForce  "no"^^xsd:boolean> ;
+        prop:hasName  "Han Solo" ;
+        prop:hasHeight  "1.72" ;
+        prop:hasMass  "80" ;
+        prop:hasHairColor  "brown" ;
+        prop:hasSkinColor  "fair" ;
+        prop:hasEyeColor  "brown" ;
+        prop:isPlayedby "Harrison Ford" ;
+        prop:hasFriend ex:luke ;
+        prop:hasFriend ex:leia .
+        prop:loves ex:leia .
+
+
+ex:vader
+        rdf:type ex:Human ;
+        rdf:type ex:Sith ;
+        prop:hasTheForce  "yes"^^xsd:boolean> ;
+        prop:hasName  "Darth Vader" ;
+        prop:hasHeight  "2.02" ;
+        prop:hasMass  "136" ;
+        prop:hasHairColor  "none" ;
+        prop:hasSkinColor  "white" ;
+        prop:hasEyeColor  "yellow" ;
+        prop:isPlayedby "David Prowse" ;
+        prop:hasSon ex:luke .
+        prop:hasDaughter ex:leia .
+
+
+

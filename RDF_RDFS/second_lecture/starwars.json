@@ -1,0 +1,86 @@
+{ 
+  "http://sample.com/leia" : { 
+    "http://sample.com/prop/hasFriend" : [ { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/luke"
+    }
+     ] ,
+    "http://sample.com/prop/isPlayedby" : [ { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/carrieFisher"
+    }
+     ]
+  }
+   ,
+  "http://sample.com/starwars" : { 
+    "http://sample.com/prop/hasCharacter" : [ { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/leia"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/solo"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/luke"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/vader"
+    }
+     ]
+  }
+   ,
+  "http://sample.com/solo" : { 
+    "http://sample.com/prop/hasFriend" : [ { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/leia"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/luke"
+    }
+     ] ,
+    "http://sample.com/prop/isPlayedby" : [ { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/harrisonFord"
+    }
+     ]
+  }
+   ,
+  "http://sample.com/luke" : { 
+    "http://sample.com/prop/hasEnemy" : [ { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/vader"
+    }
+     ] ,
+    "http://sample.com/prop/hasFriend" : [ { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/leia"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/solo"
+    }
+     ] ,
+    "http://sample.com/prop/isPlayedby" : [ { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/markHamill"
+    }
+     ]
+  }
+   ,
+  "http://sample.com/vader" : { 
+    "http://sample.com/prop/hasSon" : [ { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/luke"
+    }
+     ] ,
+    "http://sample.com/prop/isPlayedby" : [ { 
+      "type" : "uri" ,
+      "value" : "http://sample.com/davidProwse"
+    }
+     ]
+  }
+}

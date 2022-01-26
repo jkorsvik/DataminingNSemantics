@@ -1,0 +1,29 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://sample.com/prop/" > 
+  <rdf:Description rdf:about="http://sample.com/leia">
+    <j.0:hasFriend rdf:resource="http://sample.com/luke"/>
+    <j.0:isPlayedby rdf:resource="http://sample.com/carrieFisher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/starwars">
+    <j.0:hasCharacter rdf:resource="http://sample.com/solo"/>
+    <j.0:hasCharacter rdf:resource="http://sample.com/vader"/>
+    <j.0:hasCharacter rdf:resource="http://sample.com/leia"/>
+    <j.0:hasCharacter rdf:resource="http://sample.com/luke"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/solo">
+    <j.0:hasFriend rdf:resource="http://sample.com/leia"/>
+    <j.0:hasFriend rdf:resource="http://sample.com/luke"/>
+    <j.0:isPlayedby rdf:resource="http://sample.com/harrisonFord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/luke">
+    <j.0:hasEnemy rdf:resource="http://sample.com/vader"/>
+    <j.0:hasFriend rdf:resource="http://sample.com/solo"/>
+    <j.0:hasFriend rdf:resource="http://sample.com/leia"/>
+    <j.0:isPlayedby rdf:resource="http://sample.com/markHamill"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/vader">
+    <j.0:hasSon rdf:resource="http://sample.com/luke"/>
+    <j.0:isPlayedby rdf:resource="http://sample.com/davidProwse"/>
+  </rdf:Description>
+</rdf:RDF>

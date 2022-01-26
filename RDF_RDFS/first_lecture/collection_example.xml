@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ex="http://example.org/stuff/1.0/">
+  <rdf:Description rdf:about="ex:Galway">
+    <ex:canOnlyBeAccessedBy rdf:nodeID="ex:GalwayAccess" />
+    <ex:canOnlyBeAccessedBy rdf:parseType="Collection">
+      <rdf:Description rdf:about="Train" />
+      <rdf:Description rdf:about="Bus" />
+      <rdf:Description rdf:about="Plane" />
+    </ex:canOnlyBeAccessedBy>
+  </rdf:Description>
+</rdf:RDF>

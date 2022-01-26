@@ -1,0 +1,22 @@
+<http://www.w3.org/2001/sw/RDFCore/ntriples/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://www.w3.org/2001/sw/RDFCore/ntriples/> <http://purl.org/dc/terms/title> "N-Triples"@en-US .
+<http://www.w3.org/2001/sw/RDFCore/ntriples/> <http://xmlns.com/foaf/0.1/maker> _:luke .
+<http://www.w3.org/2001/sw/RDFCore/ntriples/> <http://xmlns.com/foaf/0.1/maker> _:solo .
+<http://www.w3.org/2001/sw/RDFCore/ntriples/> <http://xmlns.com/foaf/0.1/maker> _:leia .
+<http://www.w3.org/2001/sw/RDFCore/ntriples/> <http://xmlns.com/foaf/0.1/maker> _:vader .
+_:luke <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:luke <http://xmlns.com/foaf/0.1/name> "Luke Skywalker".
+_:luke ex:played_by "Mark Hamill" .
+_:solo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:solo <http://xmlns.com/foaf/0.1/name> "Han Solo".
+_:solo ex:played_by "Harrison Ford" .
+_:leia <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:leia <http://xmlns.com/foaf/0.1/name> "Princess Leia".
+_:leia ex:played_by "Carrie Fisher" .
+_:vader <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:vader <http://xmlns.com/foaf/0.1/name> "Darth Vader".
+_:vader ex:played_by "David Prowse" .
+_:luke and _:solo and _:leia are friends .
+_:luke and _:leia are siblings .
+_:luke ex:enemy _:vader .
+_:vader ex:father _:luke .

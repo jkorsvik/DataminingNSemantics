@@ -1,0 +1,28 @@
+@prefix ex: <http://sample.com/> .
+@prefix prop: <http://sample.com/prop/> .
+
+ex:starwars  prop:hasCharacter  ex:luke ;
+        prop:hasCharacter  ex:leia ;
+        prop:hasCharacter  ex:vader ;
+        prop:hasCharacter  ex:solo .
+
+ex:luke  prop:isPlayedby  ex:markHamill .
+
+ex:leia  prop:isPlayedby  ex:carrieFisher .
+
+ex:vader  prop:isPlayedby  ex:davidProwse .
+
+ex:solo  prop:isPlayedby  ex:harrisonFord .
+
+ex:luke  prop:hasFriend  ex:leia .
+
+ex:leia  prop:hasFriend  ex:luke .
+
+ex:luke  prop:hasFriend  ex:solo .
+
+ex:solo  prop:hasFriend  ex:luke ;
+        prop:hasFriend  ex:leia .
+
+ex:luke  prop:hasEnemy  ex:vader .
+
+ex:vader  prop:hasSon  ex:luke .

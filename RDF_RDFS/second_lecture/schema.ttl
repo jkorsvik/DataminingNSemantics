@@ -1,0 +1,66 @@
+@prefix ex: <http://sample.com/> . 
+@prefix prop: <http://sample.com/prop/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix type: <http://sample/type/ID> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+
+
+ex:Movie rdf:type rdfs:Class .
+ex:StarWarsMovie rdfs:subClassOf type:Movie .
+prop:hasCharacter rdfs:domain ex:Movie .
+prop:hasCharacter rdfs:range ex:Creature .
+
+ex:Creature rdf:type rdfs:Class .
+ex:Human rdfs:subClassOf ex:Creature .
+ex:Droid rdfs:subClassOf ex:Creature .
+ex:Wookie rdfs:subClassOf ex:Creature .
+ex:Unknown rdfs:subClassOf ex:Creature .
+
+ex:Jedi rdf:type ex:Creature .
+ex:Sith rdf:type ex:Creature .
+prop:hasTheForce rdf:type rdf:Property .
+prop:hasTheForce rdfs:domain ex:Jedi .
+prop:hasTheForce rdfs:range ex:Jedi . 
+
+
+
+prop:hasAttribute rdf:type rdf:Property .
+prop:hasAttribute rdfs:domain ex:Creature .
+prop:hasAttribute rdfs:range xsd:boolean .
+
+prop:hasName rdfs:subpropertyOf prop:hasAttribute .
+prop:hasHairColor rdfs:subpropertyOf prop:hasAttribute .
+prop:hasEyeColor rdfs:subpropertyOf prop:hasAttribute .
+prop:hasHeight rdfs:subpropertyOf prop:hasAttribute .
+prop:hasMass rdfs:subpropertyOf prop:hasAttribute .
+prop:hasGender rdfs:subpropertyOf prop:hasAttribute .
+prop:hasSkinColor rdfs:subpropertyOf prop:hasAttribute .
+prop:hasStarship rdfs:subpropertyOf prop:hasAttribute .
+
+
+ex:SpaceShip rdf:type rdfs:Class .
+ex:MilleniumFalcon rdf:type ex:SpaceShip .
+prop:hasSpeed rdfs:domain ex:SpaceShip .
+prop:hasSpeed rdfs:range xsd:float .
+
+ex:Pilot rdf:type rdfs:Class .
+ex:CoPilot rdfs:subClassOf ex:Pilot .
+ex:Captain rdfs:subClassOf ex:Pilot .
+
+prop:likes rdf:type rdf:Property .
+prop:loves rdf:subpropertyOf prop:likes .
+
+prop:hasRelation rdf:type rdf:Property .
+prop:hasRelation rdfs:domain ex:Creature .
+prop:hasRelation rdfs:range ex:Creature .
+
+prop:hasEnemy rdfs:subpropertyOf prop:hasRelation .
+prop:hasFriend rdfs:subpropertyOf prop:hasRelation .
+prop:hasSister rdfs:subpropertyOf prop:hasRelation .
+prop:hasBrother rdfs:subpropertyOf prop:hasRelation .
+prop:hasSon rdfs:subpropertyOf prop:hasRelation .
+prop:hasDaughter rdfs:subpropertyOf prop:hasRelation .
+prop:hasFather rdfs:subpropertyOf prop:hasRelation .
+prop:hasMother rdfs:subpropertyOf prop:hasRelation .
+

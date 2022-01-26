@@ -1,0 +1,245 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:prop="http://sample.com/prop/"
+    xmlns:type="http://sample/type/ID"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ex="http://sample.com/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://sample.com/Human">
+    <rdfs:subClassOf rdf:resource="http://sample.com/Creature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasCaptain">
+    <rdfs:range rdf:resource="http://sample.com/Captain"/>
+    <rdfs:domain rdf:resource="http://sample.com/SpaceShip"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/CoPilot">
+    <rdfs:subClassOf rdf:resource="http://sample.com/Pilot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasEnemy">
+    <owl:sameAs rdf:resource="http://sample.com/prop/hasEnemy"/>
+    <owl:inverseOf rdf:resource="http://sample.com/hasFriend"/>
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasRelation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/SpaceShip">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasEyeColor">
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasAttribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/StarWarsMovie">
+    <rdfs:subClassOf rdf:resource="http://sample/type/IDMovie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/luke">
+    <prop:hasHairColor>blond</prop:hasHairColor>
+    <prop:hasMass>77</prop:hasMass>
+    <prop:hasFather rdf:resource="http://sample.com/vader"/>
+    <prop:hasHeight>1.72</prop:hasHeight>
+    <rdf:type rdf:resource="http://sample.com/Human"/>
+    <prop:hasName>Luke Skywalker</prop:hasName>
+    <prop:hasTheForce rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</prop:hasTheForce>
+    <prop:hasFriend rdf:resource="http://sample.com/leia"/>
+    <rdf:type rdf:resource="http://sample.com/Jedi"/>
+    <prop:hasSkinColor>fair</prop:hasSkinColor>
+    <prop:hasEyeColor>blue</prop:hasEyeColor>
+    <prop:hasEnemy rdf:resource="http://sample.com/vader"/>
+    <prop:hasSister rdf:resource="http://sample.com/leia"/>
+    <prop:isPlayedby>Mark Hamill</prop:isPlayedby>
+    <prop:hasFriend rdf:resource="http://sample.com/han"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasStarship">
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasAttribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/likes">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/vader">
+    <prop:hasMass>136</prop:hasMass>
+    <prop:hasName>Darth Vader</prop:hasName>
+    <prop:hasTheForce rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</prop:hasTheForce>
+    <prop:isPlayedby>David Prowse</prop:isPlayedby>
+    <prop:hasHairColor>none</prop:hasHairColor>
+    <prop:hasEyeColor>yellow</prop:hasEyeColor>
+    <prop:hasDaughter rdf:resource="http://sample.com/leia"/>
+    <rdf:type rdf:resource="http://sample.com/Human"/>
+    <prop:hasSkinColor>white</prop:hasSkinColor>
+    <prop:hasHeight>2.02</prop:hasHeight>
+    <prop:hasSon rdf:resource="http://sample.com/luke"/>
+    <rdf:type rdf:resource="http://sample.com/Sith"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasTheForce">
+    <rdfs:range rdf:resource="http://sample.com/Jedi"/>
+    <rdfs:domain rdf:resource="http://sample.com/Jedi"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/Wookie">
+    <rdfs:subClassOf rdf:resource="http://sample.com/Creature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasSkinColor">
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasAttribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasFather">
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasRelation"/>
+    <owl:equivalentProperty rdf:resource="http://sample.com/prop/hasDaughter"/>
+    <owl:equivalentProperty rdf:resource="http://sample.com/prop/hasSon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/solo">
+    <prop:hasSkinColor>fair</prop:hasSkinColor>
+    <prop:hasFriend rdf:resource="http://sample.com/luke"/>
+    <prop:hasHeight>1.72</prop:hasHeight>
+    <prop:hasTheForce rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</prop:hasTheForce>
+    <prop:hasHairColor>brown</prop:hasHairColor>
+    <prop:hasEyeColor>brown</prop:hasEyeColor>
+    <prop:loves rdf:resource="http://sample.com/leia"/>
+    <prop:hasName>Han Solo</prop:hasName>
+    <prop:hasFriend rdf:resource="http://sample.com/leia"/>
+    <rdf:type rdf:resource="http://sample.com/Human"/>
+    <prop:hasMass>80</prop:hasMass>
+    <prop:isPlayedby>Harrison Ford</prop:isPlayedby>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/MilleniumFalcon">
+    <ex:hasCoPilot rdf:resource="http://sample.com/chew"/>
+    <ex:hasPassenger rdf:resource="http://sample.com/chew"/>
+    <ex:hasCaptain rdf:resource="http://sample.com/solo"/>
+    <ex:hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.5</ex:hasSpeed>
+    <rdf:type rdf:resource="http://sample.com/SpaceShip"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/Sith">
+    <rdf:type rdf:resource="http://sample.com/Creature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasMass">
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasAttribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasCharacter">
+    <rdfs:range rdf:resource="http://sample.com/Creature"/>
+    <rdfs:domain rdf:resource="http://sample.com/Movie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasSister">
+    <owl:inverseOf rdf:resource="http://sample.com/hasBrother"/>
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasRelation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/loves">
+    <rdf:subpropertyOf rdf:resource="http://sample.com/prop/likes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasRelation">
+    <rdfs:range rdf:resource="http://sample.com/Creature"/>
+    <rdfs:domain rdf:resource="http://sample.com/Creature"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/leia">
+    <prop:hasHairColor>brown</prop:hasHairColor>
+    <prop:hasFather rdf:resource="http://sample.com/vader"/>
+    <prop:hasTheForce rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</prop:hasTheForce>
+    <prop:isPlayedby>Carrie Fisher</prop:isPlayedby>
+    <prop:hasMass>49</prop:hasMass>
+    <prop:hasHeight>1.72</prop:hasHeight>
+    <prop:hasName>Leia Organa</prop:hasName>
+    <prop:hasBrother rdf:resource="http://sample.com/luke"/>
+    <rdf:type rdf:resource="http://sample.com/Human"/>
+    <prop:hasFriend rdf:resource="http://sample.com/luke"/>
+    <prop:hasEnemy rdf:resource="http://sample.com/vader"/>
+    <prop:hasSkinColor>light</prop:hasSkinColor>
+    <prop:hasEyeColor>brown</prop:hasEyeColor>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasHairColor">
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasAttribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasHeight">
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasAttribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasAttribute">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://sample.com/Creature"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/yoda">
+    <prop:hasEnemy rdf:resource="http://sample.com/vader"/>
+    <prop:hasHairColor>white</prop:hasHairColor>
+    <prop:hasName>Yoda</prop:hasName>
+    <rdf:type rdf:resource="http://sample.com/Unknown"/>
+    <prop:hasMass>68</prop:hasMass>
+    <prop:hasHeight>1.68</prop:hasHeight>
+    <prop:hasTheForce rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</prop:hasTheForce>
+    <rdf:type rdf:resource="http://sample.com/Jedi"/>
+    <prop:hasFriend rdf:resource="http://sample.com/luke"/>
+    <prop:hasSkinColor>green</prop:hasSkinColor>
+    <prop:isPlayedby>Frank Oz</prop:isPlayedby>
+    <prop:hasEyeColor>green</prop:hasEyeColor>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/Pilot">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasSpeed">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="http://sample.com/SpaceShip"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/StarWarsIV">
+    <prop:hasCharacter rdf:resource="http://sample.com/vader"/>
+    <prop:hasCharacter rdf:resource="http://sample.com/chew"/>
+    <prop:hasCharacter rdf:resource="http://sample.com/leia"/>
+    <prop:hasCharacter rdf:resource="http://sample.com/yoda"/>
+    <prop:hasCharacter rdf:resource="http://sample.com/luke"/>
+    <rdf:type rdf:resource="http://sample.com/StarWarsMovie"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasPassenger">
+    <rdfs:range rdf:resource="http://sample.com/Creature"/>
+    <rdfs:domain rdf:resource="http://sample.com/SpaceShip"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasBrother">
+    <owl:inverseOf rdf:resource="http://sample.com/hasSister"/>
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasRelation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/Unknown">
+    <rdfs:subClassOf rdf:resource="http://sample.com/Creature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/Jedi">
+    <rdf:type rdf:resource="http://sample.com/Creature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/Creature">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasName">
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasAttribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasCoPilot">
+    <rdfs:domain rdf:resource="http://sample.com/Pilot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/Captain">
+    <rdfs:subClassOf rdf:resource="http://sample.com/Pilot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/Droid">
+    <rdfs:subClassOf rdf:resource="http://sample.com/Creature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/Movie">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasFriend">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasRelation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasGender">
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasAttribute"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/chew">
+    <prop:hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#float">80</prop:hasMass>
+    <prop:hasSkinColor xml:lang="en">brown</prop:hasSkinColor>
+    <prop:hasName xml:lang="en">Chewbacca</prop:hasName>
+    <prop:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.85</prop:hasHeight>
+    <rdf:type rdf:resource="http://sample.com/Wookie"/>
+    <prop:isPlayedby xml:lang="en">unknown</prop:isPlayedby>
+    <prop:hasEyeColor xml:lang="en">brown</prop:hasEyeColor>
+    <prop:hasHairColor xml:lang="en">brown</prop:hasHairColor>
+    <prop:hasFriend rdf:resource="http://sample.com/solo"/>
+    <prop:hasFriend rdf:resource="http://sample.com/leia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasSon">
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasRelation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasMother">
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasRelation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample.com/prop/hasDaughter">
+    <rdfs:subpropertyOf rdf:resource="http://sample.com/prop/hasRelation"/>
+  </rdf:Description>
+</rdf:RDF>
